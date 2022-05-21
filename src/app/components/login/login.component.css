@@ -2,6 +2,12 @@
   /* border: 1px solid black;*/
 }
 
+#title-login{
+    margin-top:10%;
+    font-family:sans-serif;
+}
+
+
 .body-login{
  /*   border: 1px solid rgb(245, 8, 8);*/
     width:100%;
@@ -12,19 +18,96 @@
 }
 
 .login{
-    border: 1px solid rgb(211, 211, 211);
-    border-radius: 8px;
+    background-color: rgb(55, 54, 56);
+    border-radius: 2px;
     margin-top: 100px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 540px;
     text-align: center;
+    color: white;
+    box-shadow: 8px 10px 20px -10px rgb(25, 25, 25);
 }
 
 .slider{
-    margin-right: 200px;
-    border: 2px solid rgb(238, 237, 237);
-    border-radius: 8px;
+   width: 433px;
+   height: 640px;
+   overflow: hidden;
+   
+}
+.slide-login{
+    margin: 0px auto 0;
+    border-radius: 12px;
     margin-top: 100px;
     width: 400px;
-    height: 500px;
+    height: auto;
+    animation: slide 15s infinite alternate ease-in-out;
 }
+
+
+.slide-login ul{
+    display: flex;
+    padding:0;
+    width: 400%;
+}
+
+.slide-login li{
+    list-style: none;
+    width:100%;
+}
+
+.sslide-login img{
+    width: 100%;
+}
+
+@keyframes slide{
+    0% {margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+
+
+
+input{
+    color: white;
+    margin-top:10%;
+    height:30px;
+    border  : none;
+    background : none;
+    border-bottom: 1px solid rgb(123, 123, 124);
+}
+
+input:focus, textarea:focus {
+    background   : rgba(122, 121, 121, 0.1);
+    border-radius: 5px;
+  }
+
+  #login-button{
+      margin-top:20%;
+      border: none;
+      height: 30px;
+      width: 110px;
+      background-color: rgb(78, 248, 89);
+      border-radius: 10px;
+      box-shadow: 10px 10px 20px -10px rgb(8, 7, 7);
+  }
+
+  #login-button:hover{
+    background-color: rgb(22, 245, 37);
+    box-shadow: 10px 11px 20px -10px rgb(8, 7, 7);
+  }
+
+  @media screen and (max-width: 675px) {
+    .slider {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
