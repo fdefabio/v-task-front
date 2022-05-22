@@ -1,26 +1,47 @@
  *{
-   /*border: 1px solid black;*/
+  /* border: 1px solid black;*/
  }
  
  .body-table{
-    border: 1px solid black;
+    margin-top:50px;
     width: 100%;
-    height: 800px;
-    align-items: center;
-    justify-content: center;
+    height: 80%;
+    flex-direction: column;
+    display: flex;
+    
   }
   
  .filter{
-    margin-left: 270px;
-     margin-top: 50px;
-     border-top: 1px solid white;
+     
+     width: 100%;
+     height: 30px;
+     display: flex;
+     justify-content: center;
  }
 
+ .div-filter{
+   width: 70%;
+ 
+ }
+
+ 
+
+  .table{
+      justify-content: center;
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+  }
+
   table{
-      margin-left: 270px;
       margin-top:10px;
       width: 70%;
       height: 50%;
   }
-
- 
+  
+  @media screen and (max-width: 675px) {
+    table{
+      width: 100%;
+    }
+  }

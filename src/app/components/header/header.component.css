@@ -22,9 +22,10 @@
     height: 100%;
 }
 
-.nav button{
+.label{
+    text-align: center;
+    border-bottom: 1px solid red;
     background-color: rgb(35, 2, 102);
-    margin-top:0%;
     width: 80px;
     height: 100%;
     color:white;
@@ -32,8 +33,13 @@
     font-size: 50px;
 }
 
-.nav button:hover{
+.label:hover{
     background-color: rgb(69, 8, 190);
+}
+
+.label label{
+    top: 35%;
+    position: relative;
 }
 
 
@@ -44,4 +50,81 @@
     justify-content: center;
     position: relative;
 }
+
+
+#button-menu{
+    display: none;
+}
+
+.nav{
+    position: absolute;
+    background: rgba(0,0,0,0);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#button-menu:checked ~ .nav{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-menu{
+    border-radius: 10px;
+    width: 300px;
+    max-width: 700px;
+    background: #1c1c1c;
+    height: 40vh;
+    position: relative;
+    transition: all 500ms ease;
+    box-shadow: 8px 10px 20px -10px rgb(25, 25, 25);
+}
+
+.nav-menu nav{
+    transform: translateY(15%);
+}
+
+.nav-menu a{
+   display:block;
+   text-decoration: none;
+   padding: 20px;
+   color: aliceblue;
+   border-left: 5px solid transparent;
+   transition: all 400ms ease;
+}
+
+
+.nav-menu a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+
+.nav-menu label{
+    position: absolute;
+    right: 15px;
+    top  : 10px;
+    color: #fff;
+    font-size:20px;
+}
+
+
+@media screen and (max-width: 675px) {
+    .nav-menu{
+      width:  100%;
+      height: 100%;
+    }
+
+    .title{
+        margin-right: 35%;
+        width:70%;
+    }
+    .header-title{
+        font-size: 200%;
+    }
+  }
 

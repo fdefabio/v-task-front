@@ -1,9 +1,13 @@
 
   <div class="body-table">
     <div class="filter"> 
+      <div class="div-filter">
         <mat-label>Buscar</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="buscar" #input>
+      </div>
+        
     </div>
+   
     <div class="table">
     
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -54,6 +58,5 @@
             </tr>
           </table>
           
-    </div>
-    
-   </div> 
+        </div>
+      </div>
