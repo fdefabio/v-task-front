@@ -1,0 +1,76 @@
+*{
+   
+}
+
+.index-body{
+    
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+}
+
+.button-div{
+    padding-top: 50px;
+    width : 40% ;
+    height: 80px;
+    margin: 0 auto; /*centrar*/
+    display: flex;
+    justify-content: right;
+}
+
+.button-c-test{
+    border:none;
+    height: 80px;
+    width: 80px;
+    border-radius:50%;
+    background-color: rgb(115, 218, 250);
+    box-shadow: 8px 10px 20px -10px rgb(25, 25, 25);
+}
+
+.button-c-test:hover{
+    
+    background-color: rgb(17, 224, 252);
+}
+
+.test-content{
+    margin: 0 auto;
+    height: 80%;
+    width: 40%;
+}
+
+
+.modal-test{
+    width: 100%;
+    height: 110%;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position : fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    visibility: hidden;
+    background: rgba(0,0,0,0.5);
+    transition: all 500ms ease;
+    -webkit-animation-name: modal;
+    -webkit-animation-duration: 0.4s;
+    animation-name: modal;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes modal {
+    from {top: -90px; opacity:0;}
+    to   {top:0; opacity:1}
+}
+
+
+.test-container{
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    background-color: rgb(55, 54, 56);
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    position: relative;
+   
+}

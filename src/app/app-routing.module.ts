@@ -9,22 +9,22 @@ import { IndexComponent } from './components/index/index.component';
 const routes: Routes = [
 
   {
-    path: 'page/index',
+    path: 'index',
     component: IndexComponent,
   },
 
   { 
-    path: 'page/login',
+    path: 'login',
     component: LoginComponent,
   },
 
   {
-    path:'page/history',
+    path:'history',
     component: HistoryComponent,
   },
 
   {
-    path:'page/register',
+    path:'register',
     component: RegisterComponent,
   }
 

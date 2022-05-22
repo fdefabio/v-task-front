@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [],
@@ -14,14 +15,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTableModule,
     MatIconModule,
     MatFormFieldModule
-    
-  ],
+    ],
   exports: [
     MatTableModule,
     MatIconModule,
-    MatFormFieldModule
-   
-    
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
   
 })
