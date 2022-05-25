@@ -19,13 +19,13 @@
 
 .login{
     background-color: rgb(55, 54, 56);
-    border-radius: 2px;
+    border-radius: 12px;
     margin-top: 100px;
     width: 400px;
     height: 540px;
     text-align: center;
     color: white;
-    box-shadow: 8px 10px 20px -10px rgb(25, 25, 25);
+    box-shadow: 15px 15px 20px -10px rgb(25, 25, 25);
 }
 
 .slider{
@@ -76,7 +76,8 @@
 
 
 input{
-    color: white;
+    color: rgb(97, 44, 243);
+    font-size: 18px;
     margin-top:10%;
     height:30px;
     border  : none;
@@ -90,17 +91,18 @@ input:focus, textarea:focus {
   }
 
   #login-button{
+      color : white;
       margin-top:20%;
       border: none;
       height: 30px;
       width: 110px;
-      background-color: rgb(78, 248, 89);
+      background-color: rgb(97, 44, 243);
       border-radius: 10px;
       box-shadow: 10px 10px 20px -10px rgb(8, 7, 7);
   }
 
   #login-button:hover{
-    background-color: rgb(22, 245, 37);
+    background-color: rgb(65, 8, 223);
     box-shadow: 10px 11px 20px -10px rgb(8, 7, 7);
   }
 
