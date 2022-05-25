@@ -1,13 +1,23 @@
 <div class= "index-body">
 
-  
-    <div class="button-div">
-        <button class="button-c-test">Nuevo</button>
-    </div>
+  <div class="button-div">
+      <button class="button-c-test">Nuevo</button>
+  </div>
        
-    <div class="test-content">
- 
-     </div>
+  <div class="test-div">
+
+      <div class="body-test" *ngFor="let examen of examenes">
+          
+        <div class="body-test-title">
+            <h3 class="test-title">{{examen.titulo}}</h3>
+        </div>
+          
+        <div>
+            <h3 class="test-description">{{examen.descripcion}}</h3>
+        </div>
+
+      </div> 
+  </div>
 
      <div class="modal-test">
          <div class="test-container"></div>

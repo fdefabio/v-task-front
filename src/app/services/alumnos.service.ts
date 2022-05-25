@@ -15,4 +15,9 @@ export class AlumnosService {
     const url = 'http://localhost:8080/Principal/Estudiantes'
     return  this.http.get<Response>(url);
   }
+
+  eliminarAlumno(id:string){
+    const url = 'http://localhost:8080/Principal/eliminarEstudiante/'+id;
+    return  this.http.delete(url);
+  }
 }

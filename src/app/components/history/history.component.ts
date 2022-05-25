@@ -25,21 +25,31 @@ export class HistoryComponent implements OnInit {
 
  
   
-  constructor(private AlumnosService: AlumnosService) { }
+  constructor(private alumnosService: AlumnosService) { }
 
   ngOnInit():void {
+    this.cargarAlumnos();
+  }
 
-    this.AlumnosService.cargarAlumnos()
+  public cargarAlumnos():void{
+    this.alumnosService.cargarAlumnos()
     .subscribe( resp => {
-      console.log(resp);
       this.usuarios=resp;
     });
   }
 
- 
-  
+  public eliminarAlumno(id:string):void {
 
-  applyFilter(event: Event) {
+    const ok = confirm("Esta seguro d eeliminar este estudiante?")
+    
+    this.alumnosService.eliminarAlumno(id)
+    .subscribe( resp => {
+   });
+   this.cargarAlumnos();
+  }
+
+
+   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 

@@ -1,21 +1,30 @@
    
-    <div class="body">
-    <div class="table-container" >
-     <table class="table">
-          <thead>
-            <tr>
-              <th>nombre</th>
-              <th>apellido</th>
-              <th>grupo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let usuario of usuarios">
-              <td>{{usuario.nombre}}</td>
-              <td>{{usuario.apellido}}</td>
-              <td>{{usuario.grupo}}</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-      </div>
+<div class="title">
+  <h1>Lista de alumnos</h1>
+</div>
+
+<div class="table-container">
+ <table class="table">
+   <div class="div-head"> 
+     <thead>
+         <tr>
+           <th>nombre</th>
+           <th>apellido</th>
+           <th>grupo</th>
+           <th></th>
+         </tr>
+      </thead>
+   </div>
+   <div class="div-body"> 
+     <tbody class="table-body"> 
+         <tr *ngFor="let usuario of usuarios">
+           <td>{{usuario.nombre}}</td>
+           <td>{{usuario.apellido}}</td>
+           <td>{{usuario.grupo}}</td>
+           <td> <button class="buton-delete"(click)="eliminarAlumno(usuario.id)">-</button> </td>
+         </tr>
+      </tbody>
+    </div>
+  </table>
+</div>  
+

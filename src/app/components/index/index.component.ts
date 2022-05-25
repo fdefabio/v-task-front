@@ -9,6 +9,8 @@ import {CargarExamenesService} from '../../services/cargar-examenes.service';
 })
 export class IndexComponent implements OnInit {
 
+  public examenes:any =[];
+
   constructor(private crearExamenes: CrearExamenesDocenteService , private cargarExamenes: CargarExamenesService) { }
 
   ngOnInit(): void {
@@ -20,6 +22,7 @@ export class IndexComponent implements OnInit {
     this.cargarExamenes.cargarExamenes()
     .subscribe( resp => {
       console.log(resp);
+      this.examenes = resp;
     })
 
 

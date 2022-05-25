@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Examen } from '../components/interfaces/request-response';
 
 @Injectable({
   providedIn: 'root'

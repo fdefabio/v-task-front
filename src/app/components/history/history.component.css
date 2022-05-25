@@ -2,26 +2,30 @@
   /* border: 1px solid black;*/
  }
 
- .body {
-   margin: bottom 200px;
-   height:700px;
+ .title{
+   margin-top: 2%;
+   text-align: center;
+   text-transform: uppercase;
+ }
+
+ .title h1{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 30px;
  }
 
  .table-container{
    width: 1000px;
+   height: 700px;
    margin: 0px auto 0;
- }
-
- 
+  }
 
   .table{
     border-radius: 8px;
     border: 1px solid rgb(219, 223, 224);
-    margin-top: 150px;
-    width: 1000px;
-    height:300px;
-    box-shadow: 15px 15px 20px -10px rgb(195, 161, 240);
+    margin-top: 40px;
+    box-shadow: 15px 15px 20px -10px rgb(162, 94, 250);
   }
+  /*  box-shadow: 15px 15px 20px -10px rgb(195, 161, 240);*/
 
   th{
     padding-left: 10px;
@@ -31,19 +35,58 @@
   }
 
   td{
+    width: 600px;
     padding-left: 10px;
     height: 40px;
     border-bottom: 1px solid rgb(219, 223, 224);
     text-align: left;
   }
 
-  tr:hover{
-    border-right:1px solid  rgb(206, 180, 240);
+ 
+  th{
+    width: 600px;
   }
 
-  
-  @media screen and (max-width: 675px) {
-    .table{
-      width: 100%;
-    }
+
+  .div-body{
+    height: 400px;
+    overflow: scroll;
+    display:block;
+ 
   }
+
+  .div-body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+ .div-body::-webkit-scrollbar-track {
+    
+    border-radius: 10px;
+  }
+
+ .div-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #340481;
+  }
+
+  .buton-delete{
+    color :white;
+    width : 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:none;
+    background-color:rgb(243, 151, 151);
+  }
+
+  .buton-delete:hover{
+    width : 32px;
+    height: 32px;
+    background-color: rgb(216, 33, 33);
+  }
+
+  @media screen and (max-width: 675px) {
+    .table-container{
+      width: 100%;
+     
+   }
+}
