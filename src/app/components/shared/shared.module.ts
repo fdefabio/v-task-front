@@ -8,6 +8,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [],
@@ -15,14 +17,17 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     CommonModule,
     MatTableModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+
    
     ],
   exports: [
     MatTableModule,
     MatIconModule,
     MatFormFieldModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
+ 
   ],
   
 })

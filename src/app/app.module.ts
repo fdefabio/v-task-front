@@ -12,7 +12,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SharedModule } from './components/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     RegisterComponent,
-   ],
+
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,8 +32,9 @@ import { FormsModule } from '@angular/forms';
     MatSliderModule,
     SharedModule,
     HttpClientModule,
-    FormsModule 
- ],
+
+    
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

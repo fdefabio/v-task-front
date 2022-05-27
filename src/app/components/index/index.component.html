@@ -1,38 +1,38 @@
 <div class= "index-body">
     <input type="checkbox" id="click"> 
     <div class="modaltest">
-       <form>
         <div class="modal-test-container">
            <div class="close-modal">
                <label for="click">X</label>
                <div class="modal-content">
+                
                    <h4>Titulo examen</h4>
-                   <input id="title" type="text" [(ngModel)]="examen.titulo" >
+                   <input [(ngModel)]="examen.titulo" id="title" type="text" >
                    <h4>Descripcion</h4>
-                   <input id="descript" type="text">
+                   <input [(ngModel)]="examen.descripcion" id="descript" type="text">
                    <h4>Algun comentario adicional?</h4>
-                   <input id="comentary" type="text">
+                   <input [(ngModel)]="examen.comentarioDocente" id="comentary" type="text">
                    <h4 id="group-title" >
-                       Grupo  <select id="group-title-select"  type="text">
+                       Grupo  <select [(ngModel)]="examen.grupo"  id="group-title-select"  type="text">
                         <option value="">Grupos</option>
-                        <option *ngFor="let examen of Examenes">{{examen.titulo}}</option>
+                        <option *ngFor="let grupo of Grupos">{{grupo.nombreGrupo}}</option>
                        </select></h4>
                    <h4>Preguntas</h4>
                    <div class="div-quest">
-                       <input type="text">
-                       <input type="text">
-                       <input type="text">
-                       <input type="text">
+                       <input [(ngModel)]="examen.pregunta[0].pregunta"  type="text">
+                       <input [(ngModel)]="examen.pregunta[1].pregunta" type="text">
+                       <input [(ngModel)]="examen.pregunta[2].pregunta" type="text">
+                       <input [(ngModel)]="examen.pregunta[3].pregunta" type="text">
                    </div>
                    <div class="div-button-save">
-                       <button class="button-save" (click)="agregarExamen()">guardar</button>
+                       <button (click)="agregarExamen()" class="button-save">guardar</button>
                    </div>
+         
                </div>
             </div>  
 
         </div>
-    </form> 
-</div>
+    </div>
 
     
     <div class="button-div">
