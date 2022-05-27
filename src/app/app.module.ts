@@ -12,6 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SharedModule } from './components/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,17 +23,17 @@ import { HttpClientModule } from '@angular/common/http';
     HistoryComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent
-  ],
+    RegisterComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
     SharedModule,
-    HttpClientModule
-    
-  ],
+    HttpClientModule,
+    FormsModule 
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })

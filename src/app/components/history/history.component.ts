@@ -39,17 +39,19 @@ export class HistoryComponent implements OnInit {
   }
 
   public eliminarAlumno(id:string):void {
-
-    const ok = confirm("Esta seguro d eeliminar este estudiante?")
-    
-    this.alumnosService.eliminarAlumno(id)
+    const ok = confirm("Esta seguro de eliminar este estudiante?")
+    if( ok == true){
+      this.alumnosService.eliminarAlumno(id)
     .subscribe( resp => {
-   });
-   this.cargarAlumnos();
+      this.cargarAlumnos();
+    });
+    
+    }
+    
   }
 
 
-   applyFilter(event: Event) {
+  applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 

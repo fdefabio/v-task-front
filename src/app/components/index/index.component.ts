@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CrearExamenesDocenteService} from '../../services/crear-examenes-docente.service';
-import {CargarExamenesService} from '../../services/cargar-examenes.service';
+import {ExamenesService} from '../../services/examenes.service';
+import { Examen } from '../interfaces/request-response';
+
 
 @Component({
   selector: 'app-index',
@@ -8,24 +9,60 @@ import {CargarExamenesService} from '../../services/cargar-examenes.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+ examen ={
+  "titulo": "",
+  "pregunta": [
+    {
+      "pregunta": "",
+    }
+  ],
+  "comentarioDocente": "",
+  "descripcion": "",
+  "grupo": ""
+}
 
-  public examenes:any =[];
+  public Examenes:any =[];
 
-  constructor(private crearExamenes: CrearExamenesDocenteService , private cargarExamenes: CargarExamenesService) { }
+  constructor(private examenes: ExamenesService) { }
 
   ngOnInit(): void {
-    this.crearExamenes.cargarCrearExamenes()
-    .subscribe( resp => {
-      console.log(resp);
-    })
-
-    this.cargarExamenes.cargarExamenes()
-    .subscribe( resp => {
-      console.log(resp);
-      this.examenes = resp;
-    })
-
-
+  this.cargarExamenes();
   }
 
+  cargarExamenes():void{
+    this.examenes.cargarExamenes()
+    .subscribe( resp => {
+      this.Examenes = resp;
+    })
+  }
+
+  eliminarExamen(id:string):void{
+    const ok = confirm("Seguro que desea eliminar este examen?");
+    if(ok == true){
+      this.examenes.eliminarExamen(id)
+      .subscribe( resp => {
+        this.cargarExamenes();
+      })   
+    }
+     
+  }
+
+  agregarExamen(){
+    this.examenes.crearExamen(this.examen)
+    .subscribe(() => 
+      this.cargarExamenes()
+     );
+
+    this.examen={
+      "titulo": "",
+      "pregunta": [
+        {
+          "pregunta": "",
+        }
+      ],
+      "comentarioDocente": "",
+      "descripcion": "",
+      "grupo": ""
+    }
+  }
 }

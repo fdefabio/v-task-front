@@ -1,27 +1,61 @@
 <div class= "index-body">
+    <input type="checkbox" id="click"> 
+    <div class="modaltest">
+       <form>
+        <div class="modal-test-container">
+           <div class="close-modal">
+               <label for="click">X</label>
+               <div class="modal-content">
+                   <h4>Titulo examen</h4>
+                   <input id="title" type="text" [(ngModel)]="examen.titulo" >
+                   <h4>Descripcion</h4>
+                   <input id="descript" type="text">
+                   <h4>Algun comentario adicional?</h4>
+                   <input id="comentary" type="text">
+                   <h4 id="group-title" >
+                       Grupo  <select id="group-title-select"  type="text">
+                        <option value="">Grupos</option>
+                        <option *ngFor="let examen of Examenes">{{examen.titulo}}</option>
+                       </select></h4>
+                   <h4>Preguntas</h4>
+                   <div class="div-quest">
+                       <input type="text">
+                       <input type="text">
+                       <input type="text">
+                       <input type="text">
+                   </div>
+                   <div class="div-button-save">
+                       <button class="button-save" (click)="agregarExamen()">guardar</button>
+                   </div>
+               </div>
+            </div>  
 
-  <div class="button-div">
-      <button class="button-c-test">Nuevo</button>
-  </div>
-       
-  <div class="test-div">
-
-      <div class="body-test" *ngFor="let examen of examenes">
-          
-        <div class="body-test-title">
-            <h3 class="test-title">{{examen.titulo}}</h3>
         </div>
-          
-        <div>
+    </form> 
+</div>
+
+    
+    <div class="button-div">
+     
+    
+      <h1 class="title">Lista de examenes</h1>
+
+      <label  for="click" class="button-c-test"> <h1>Nuevo</h1></label>
+    </div>
+   
+    <div class="test-div">
+        <div class="body-test" *ngFor="let examen of Examenes">
+            <div class="body-test-title">
+                <h3 class="test-title">{{examen.titulo}}</h3>
+            </div>
+        <div class="descripcion-div">
             <h3 class="test-description">{{examen.descripcion}}</h3>
         </div>
-
-      </div> 
-  </div>
-
-     <div class="modal-test">
-         <div class="test-container"></div>
-     </div>
-
+        <div class="buttons-div">
+            <button title="eliminar" class="button-delete" (click)="eliminarExamen(examen.id)">-</button>
+            <button title="editar" class="button-update">+</button>
+        </div>
+        </div> 
+    </div>
     
 </div>

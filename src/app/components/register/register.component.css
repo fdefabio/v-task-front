@@ -23,15 +23,17 @@
 }
 
 input{
+    outline: none; 
     font-size: 18px;
     color: rgb(124, 80, 247);
-    height:20px;
+    height:30px;
     width: 250px;
     border  : none;
     background : none;
     padding:0;
     border-bottom: 1px solid rgb(123, 123, 124);
 }
+
 
 #login-button{
     color: white;

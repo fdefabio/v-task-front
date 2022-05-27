@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
+
 //Angular material
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,6 +16,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatTableModule,
     MatIconModule,
     MatFormFieldModule
+   
     ],
   exports: [
     MatTableModule,

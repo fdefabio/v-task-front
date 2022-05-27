@@ -2,22 +2,26 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Response } from 'src/app/components/interfaces/request-response';
 
+const BASE_URL = 'http://localhost:8080';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AlumnosService {
+
+  
 
   constructor(private http: HttpClient) { 
     
   }
 
   cargarAlumnos(){
-    const url = 'http://localhost:8080/Principal/Estudiantes'
-    return  this.http.get<Response>(url);
+      
+    return  this.http.get<Response>(`${BASE_URL}/Principal/Estudiantes`);
   }
 
   eliminarAlumno(id:string){
-    const url = 'http://localhost:8080/Principal/eliminarEstudiante/'+id;
+    const url = `${BASE_URL}/Principal/eliminarEstudiante/`+id;
     return  this.http.delete(url);
   }
 }

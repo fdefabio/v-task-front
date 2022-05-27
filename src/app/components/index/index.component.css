@@ -1,11 +1,112 @@
 *{
-   
+ /*border: 1px solid ;*/
+}
+
+
+.title{
+    margin-right: 150px;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .index-body{
     width: 100%;
     height: 800px;
     flex-direction: column;
+}
+
+#click{
+   display:none;
+}
+
+#click:checked ~ .modaltest{
+    opacity: 1;
+    visibility: visible; 
+}
+
+.modaltest{
+    margin: 0 auto;
+    width : 100%;
+    height: 70%;
+    position: absolute;
+    opacity: 0;
+    visibility:hidden;
+}
+
+
+.modal-test-container{
+    margin: 0 auto;
+    width: 500px;
+    height: 530px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 7px 25px rgb(176, 118, 253);
+    border-radius: 10px;
+    position: relative;   
+    margin-top: 100px;
+    text-align: center;
+}
+
+.close-modal{
+    padding-top : 5%;
+    font-size: 30px;
+    text-align: right;
+    width: 100%;
+    height: 50px;
+    }
+
+.close-modal label{
+    padding-right: 6%;
+}    
+
+.close-modal label:hover{
+    color: red;
+}
+
+.modal-content{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.modal-content h4{
+    margin-top: 3%;
+    margin-left: 20%;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0;
+    width: 50%;
+}
+
+.modal-content input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(65, 8, 223);;
+    outline: none; /*quitar el borde al dar click al input*/
+    height: 20px;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#group-title{
+    width: 500%;
+}
+
+#group-title-select{
+    width:220px;
+    height: 30px;
+    margin-left: 15px;
+} 
+
+.button-save{
+    color: aliceblue;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(97, 44, 243);
+} 
+
+.button-save:hover{
+    background-color: rgb(65, 8, 223);
 }
 
 .button-div{
@@ -18,16 +119,20 @@
 }
 
 .button-c-test{
+    text-align: center;
     border:none;
     height: 80px;
     width: 80px;
     border-radius:50%;
     background-color: rgb(115, 218, 250);
-    box-shadow: 8px 10px 20px -10px rgb(25, 25, 25);
+    box-shadow: 8px 10px 20px -10px rgb(176, 118, 253);
+}
+
+.button-c-test h1{
+    margin-top: 25%;
 }
 
 .button-c-test:hover{
-    
     background-color: rgb(17, 224, 252);
 }
 
@@ -52,8 +157,15 @@
     background-color: #340481;
   }
 
+  
+.test-title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
 .body-test{
-    border: 1px solid rgb(245, 242, 242);
+    text-align: center;
+    border: 1px solid rgb(212, 208, 208);
     width : 150px;
     height: 150px;
     margin-left: 2%;
@@ -64,27 +176,43 @@
     box-shadow: 15px 15px 20px -10px rgb(176, 118, 253);
 }
 
-
-.modal-test{
+.buttons-div{
     width: 100%;
-    height: 110%;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    position : fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    visibility: hidden;
-    background: rgba(0,0,0,0.5);
-    transition: all 500ms ease;
-    -webkit-animation-name: modal;
-    -webkit-animation-duration: 0.4s;
-    animation-name: modal;
-    animation-duration: 0.4s;
+    height:15%;
+    display: flex;
 }
 
+.button-delete{
+    margin-left:10%;
+    border:none;
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    background-color:rgb(243, 151, 151);
+}
+
+.button-delete:hover{
+    background-color:rgb(243, 151, 151);
+    background-color: rgb(216, 33, 33);
+}
+
+.button-update{
+    margin-left:10%;
+    border:none;
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    background-color:rgb(246, 248, 129);
+}
+
+.button-update:hover{
+    background-color:rgb(229, 252, 22);
+}
+
+
+
 .body-test-title{
+    text-align: center;
     width: 100%;
     height: 20%;
     background-color: rgb(218, 202, 255);
@@ -92,24 +220,61 @@
     overflow: hidden;
 }
 
+.descripcion-div{
+    width: 98%;
+    height: 60%;
+    overflow: scroll
+}
+
+.descripcion-div::-webkit-scrollbar {
+    width: 12px;
+  }
+
+.descripcion-div::-webkit-scrollbar-track {
+    
+    border-radius: 10px;
+  }
+
+.descripcion-div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #340481;
+  }
+
 .test-description{
     display:inline-block;
     overflow: hidden;
 }
 
-.test-container{
-    width: 600px;
-    height: 300px;
-    margin: auto;
-    background-color: rgb(55, 54, 56);
-    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
-    border-radius: 10px;
-    position: relative;
-   
-}
 
 
 @media screen and (max-width: 675px) {
+
+    .modal-test-container{
+        width: 100%;
+        height: 110%;
+        margin-left:0;
+        margin-top: 90px
+    }
+
+    #group-title-select{
+        width:150px;
+        height: 30px;
+        margin-left: 15px;
+    } 
+
+    .button-c-test h1{
+        font-size: 20px;
+    }
+
+    .title{
+        margin-right: 12px;
+        font-size: 40px;
+    }
+
+    .button-c-test{
+        width : 60px;
+        height: 60px;
+    }
 
     .button-div{
         padding-left: 40%;

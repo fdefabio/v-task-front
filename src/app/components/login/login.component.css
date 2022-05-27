@@ -76,6 +76,7 @@
 
 
 input{
+    outline: none; 
     color: rgb(97, 44, 243);
     font-size: 18px;
     margin-top:10%;
@@ -84,11 +85,6 @@ input{
     background : none;
     border-bottom: 1px solid rgb(123, 123, 124);
 }
-
-input:focus, textarea:focus {
-    background   : rgba(122, 121, 121, 0.1);
-    border-radius: 5px;
-  }
 
   #login-button{
       color : white;
