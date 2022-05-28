@@ -53,7 +53,6 @@ export class IndexComponent implements OnInit {
   cargarGrupos():void{
     this.examenes.cargarGrupos()
     .subscribe( resp => {
-      console.log(resp)
       this.Grupos = resp;
     })
   }
